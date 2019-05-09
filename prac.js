@@ -1,9 +1,11 @@
-function foo(x) {
-    x = [4, 5, 6];
+function foo() {
+    try {
+        throw 42;
+    }
+    finally {
+        console.log("Hello");
+    }
+    console.log("실행될 리 없지");
 }
 
-var a = [1, 2, 3];
-
-console.log(a);
-foo(a);
-console.log(a);
+console.log(foo());
